@@ -13,12 +13,11 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/free5gc/version"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/nssf/service"
 	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
-
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/nssf/service"
-	"github.com/free5gc/version"
 )
 
 var NSSF = &service.NSSF{}

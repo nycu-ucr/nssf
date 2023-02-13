@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/free5gc/nssf/factory"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/openapi/models"
 	"github.com/free5gc/path_util"
+	"github.com/nycu-ucr/nssf/factory"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // Title in Problem Details for NSSF HTTP APIs

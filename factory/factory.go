@@ -11,7 +11,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/free5gc/nssf/logger"
+	"github.com/nycu-ucr/nssf/logger"
 )
 
 var (

@@ -10,16 +10,17 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"net/http"
 	"reflect"
+
+	"github.com/nycu-ucr/gonet/http"
 
 	jsonpatch "github.com/evanphx/json-patch"
 
-	"github.com/free5gc/nssf/factory"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/nssf/plugin"
-	"github.com/free5gc/nssf/util"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/nssf/factory"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/nssf/plugin"
+	"github.com/nycu-ucr/nssf/util"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // NSSAIAvailability DELETE method

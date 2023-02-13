@@ -9,15 +9,16 @@ package consumer
 import (
 	"context"
 	"fmt"
-	"net/http"
 	"strings"
 	"time"
 
-	nssf_context "github.com/free5gc/nssf/context"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/Nnrf_NFManagement"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/gonet/http"
+
+	nssf_context "github.com/nycu-ucr/nssf/context"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/openapi"
+	"github.com/nycu-ucr/openapi/Nnrf_NFManagement"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 func BuildNFProfile(context *nssf_context.NSSFContext) (profile models.NfProfile, err error) {

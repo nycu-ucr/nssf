@@ -9,14 +9,15 @@ package producer
 import (
 	"fmt"
 	"math"
-	"net/http"
 	"strconv"
 	"time"
 
-	"github.com/free5gc/nssf/factory"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/nssf/util"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/gonet/http"
+
+	"github.com/nycu-ucr/nssf/factory"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/nssf/util"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // Get available subscription ID from configuration

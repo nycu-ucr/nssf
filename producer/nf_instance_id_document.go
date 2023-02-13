@@ -10,12 +10,12 @@
 package producer
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 
-	"github.com/free5gc/http_wrapper"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/nssf/plugin"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/http_wrapper"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/nssf/plugin"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // HandleNSSAIAvailabilityDelete - Deletes an already existing S-NSSAIs per TA

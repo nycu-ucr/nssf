@@ -9,11 +9,12 @@ package producer
 import (
 	"fmt"
 	"math/rand"
-	"net/http"
 
-	"github.com/free5gc/nssf/plugin"
-	"github.com/free5gc/nssf/util"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/gonet/http"
+
+	"github.com/nycu-ucr/nssf/plugin"
+	"github.com/nycu-ucr/nssf/util"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 func selectNsiInformation(nsiInformationList []models.NsiInformation) models.NsiInformation {

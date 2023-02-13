@@ -13,21 +13,20 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/sirupsen/logrus"
-	"github.com/urfave/cli"
-
-	"github.com/free5gc/http2_util"
-	"github.com/free5gc/logger_util"
-	"github.com/free5gc/nssf/consumer"
-	"github.com/free5gc/nssf/context"
-	"github.com/free5gc/nssf/factory"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/nssf/nssaiavailability"
-	"github.com/free5gc/nssf/nsselection"
-	"github.com/free5gc/nssf/util"
-	openApiLogger "github.com/free5gc/openapi/logger"
 	"github.com/free5gc/path_util"
 	pathUtilLogger "github.com/free5gc/path_util/logger"
+	"github.com/nycu-ucr/http2_util"
+	"github.com/nycu-ucr/logger_util"
+	"github.com/nycu-ucr/nssf/consumer"
+	"github.com/nycu-ucr/nssf/context"
+	"github.com/nycu-ucr/nssf/factory"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/nssf/nssaiavailability"
+	"github.com/nycu-ucr/nssf/nsselection"
+	"github.com/nycu-ucr/nssf/util"
+	openApiLogger "github.com/nycu-ucr/openapi/logger"
+	"github.com/sirupsen/logrus"
+	"github.com/urfave/cli"
 )
 
 type NSSF struct{}

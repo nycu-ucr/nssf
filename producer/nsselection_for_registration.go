@@ -7,12 +7,12 @@
 package producer
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/nssf/plugin"
-	"github.com/free5gc/nssf/util"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/nssf/plugin"
+	"github.com/nycu-ucr/nssf/util"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // Set Allowed NSSAI with Subscribed S-NSSAI(s) which are marked as default S-NSSAI(s)

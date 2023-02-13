@@ -12,15 +12,15 @@ package producer
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
 	"net/url"
 	"strings"
 
-	"github.com/free5gc/http_wrapper"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/nssf/plugin"
-	"github.com/free5gc/nssf/util"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/gonet/http"
+	"github.com/nycu-ucr/http_wrapper"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/nssf/plugin"
+	"github.com/nycu-ucr/nssf/util"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // Parse NSSelectionGet query parameter
@@ -80,7 +80,8 @@ func parseQueryParameter(query url.Values) (plugin.NsselectionQueryParameter, er
 
 // Check if the NF service consumer is authorized
 // TODO: Check if the NF service consumer is legal with local configuration, or possibly after querying NRF through
-//       `nf-id` e.g. Whether the V-NSSF is authorized
+//
+//	`nf-id` e.g. Whether the V-NSSF is authorized
 func checkNfServiceConsumer(nfType models.NfType) error {
 	if nfType != models.NfType_AMF && nfType != models.NfType_NSSF {
 		return fmt.Errorf("`nf-type`:'%s' is not authorized to retrieve the slice selection information", string(nfType))

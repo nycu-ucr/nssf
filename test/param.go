@@ -7,13 +7,13 @@ package test
 import (
 	"flag"
 
-	. "github.com/free5gc/nssf/plugin"
 	"github.com/free5gc/path_util"
+	. "github.com/nycu-ucr/nssf/plugin"
 )
 
 var (
 	ConfigFileFromArgs string
-	DefaultConfigFile  string = path_util.Free5gcPath("github.com/free5gc/nssf/test/conf/test_nssf_config.yaml")
+	DefaultConfigFile  string = path_util.Free5gcPath("github.com/nycu-ucr/nssf/test/conf/test_nssf_config.yaml")
 )
 
 type TestingUtil struct {

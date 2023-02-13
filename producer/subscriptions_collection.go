@@ -10,11 +10,11 @@
 package producer
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 
-	"github.com/free5gc/http_wrapper"
-	"github.com/free5gc/nssf/logger"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/http_wrapper"
+	"github.com/nycu-ucr/nssf/logger"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // HandleNSSAIAvailabilityPost - Creates subscriptions for notification about updates to NSSAI availability information
