@@ -10,14 +10,14 @@
 package nsselection
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"strings"
 
-	"github.com/gin-gonic/gin"
+	"github.com/nycu-ucr/gin"
 
 	"github.com/free5gc/nssf/internal/logger"
 	"github.com/free5gc/nssf/pkg/factory"
-	logger_util "github.com/free5gc/util/logger"
+	logger_util "github.com/nycu-ucr/util/logger"
 )
 
 // Route is the information for every URI.

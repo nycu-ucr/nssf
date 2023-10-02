@@ -10,11 +10,11 @@
 package producer
 
 import (
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 
 	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/nycu-ucr/openapi/models"
+	"github.com/nycu-ucr/util/httpwrapper"
 )
 
 // HandleNSSAIAvailabilityUnsubscribe - Deletes an already existing NSSAI availability notification subscription

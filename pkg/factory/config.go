@@ -13,7 +13,7 @@ import (
 	"github.com/asaskevich/govalidator"
 
 	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 const (

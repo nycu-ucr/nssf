@@ -12,15 +12,15 @@ package producer
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"net/url"
 	"strings"
 
 	"github.com/free5gc/nssf/internal/logger"
 	"github.com/free5gc/nssf/internal/plugin"
 	"github.com/free5gc/nssf/internal/util"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/util/httpwrapper"
+	"github.com/nycu-ucr/openapi/models"
+	"github.com/nycu-ucr/util/httpwrapper"
 )
 
 // Parse NSSelectionGet query parameter
