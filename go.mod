@@ -1,4 +1,4 @@
-module github.com/free5gc/nssf
+module github.com/nycu-ucr/nssf
 
 go 1.17
 
