@@ -8,6 +8,7 @@
 package context
 
 import (
+	"context"
 	"fmt"
 	"os"
 	"strconv"
@@ -17,7 +18,8 @@ import (
 
 	"github.com/free5gc/nssf/internal/logger"
 	"github.com/free5gc/nssf/pkg/factory"
-	"github.com/nycu-ucr/openapi/models"
+	"github.com/free5gc/openapi/models"
+	"github.com/free5gc/openapi/oauth"
 )
 
 var nssfContext = NSSFContext{}
@@ -41,6 +43,12 @@ func Init() {
 	nssfContext.NrfUri = fmt.Sprintf("%s://%s:%d", models.UriScheme_HTTPS, nssfContext.RegisterIPv4, 29510)
 }
 
+type NFContext interface {
+	AuthorizationCheck(token string, serviceName models.ServiceName) error
+}
+
+var _ NFContext = &NSSFContext{}
+
 type NSSFContext struct {
 	NfId         string
 	Name         string
@@ -51,7 +59,9 @@ type NSSFContext struct {
 	SBIPort           int
 	NfService         map[models.ServiceName]models.NfService
 	NrfUri            string
+	NrfCertPem        string
 	SupportedPlmnList []models.PlmnId
+	OAuth2Required    bool
 }
 
 // Initialize NSSF context with configuration factory
@@ -83,7 +93,7 @@ func InitNssfContext() {
 		logger.InitLog.Warn("NRF Uri is empty! Using localhost as NRF IPv4 address.")
 		nssfContext.NrfUri = fmt.Sprintf("%s://%s:%d", nssfContext.UriScheme, "127.0.0.1", 29510)
 	}
-
+	nssfContext.NrfCertPem = nssfConfig.Configuration.NrfCertPem
 	nssfContext.SupportedPlmnList = nssfConfig.Configuration.SupportedPlmnList
 }
 
@@ -124,4 +134,24 @@ func GetIpv4Uri() string {
 
 func GetSelf() *NSSFContext {
 	return &nssfContext
+}
+
+func (c *NSSFContext) GetTokenCtx(serviceName models.ServiceName, targetNF models.NfType) (
+	context.Context, *models.ProblemDetails, error,
+) {
+	if !c.OAuth2Required {
+		return context.TODO(), nil, nil
+	}
+	return oauth.GetTokenCtx(models.NfType_NSSF, targetNF,
+		c.NfId, c.NrfUri, string(serviceName))
+}
+
+func (c *NSSFContext) AuthorizationCheck(token string, serviceName models.ServiceName) error {
+	if !c.OAuth2Required {
+		logger.UtilLog.Debugf("NSSFContext::AuthorizationCheck: OAuth2 not required\n")
+		return nil
+	}
+
+	logger.UtilLog.Debugf("NSSFContext::AuthorizationCheck: token[%s] serviceName[%s]\n", token, serviceName)
+	return oauth.VerifyOAuth(token, string(serviceName), c.NrfCertPem)
 }

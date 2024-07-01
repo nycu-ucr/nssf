@@ -5,7 +5,7 @@
 package plugin
 
 import (
-	. "github.com/nycu-ucr/openapi/models"
+	. "github.com/free5gc/openapi/models"
 )
 
 type NsselectionQueryParameter struct {

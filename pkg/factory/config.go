@@ -13,7 +13,7 @@ import (
 	"github.com/asaskevich/govalidator"
 
 	"github.com/free5gc/nssf/internal/logger"
-	"github.com/nycu-ucr/openapi/models"
+	"github.com/free5gc/openapi/models"
 )
 
 const (
@@ -58,6 +58,7 @@ type Configuration struct {
 	Sbi                      *Sbi                    `yaml:"sbi"`
 	ServiceNameList          []models.ServiceName    `yaml:"serviceNameList"`
 	NrfUri                   string                  `yaml:"nrfUri"`
+	NrfCertPem               string                  `yaml:"nrfCertPem,omitempty" valid:"optional"`
 	SupportedPlmnList        []models.PlmnId         `yaml:"supportedPlmnList,omitempty"`
 	SupportedNssaiInPlmnList []SupportedNssaiInPlmn  `yaml:"supportedNssaiInPlmnList"`
 	NsiList                  []NsiConfig             `yaml:"nsiList,omitempty"`
