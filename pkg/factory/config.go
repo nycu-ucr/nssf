@@ -13,7 +13,7 @@ import (
 	"github.com/asaskevich/govalidator"
 
 	"github.com/free5gc/nssf/internal/logger"
-	"github.com/nycu-ucr/openapi/models"
+	"github.com/free5gc/openapi/models"
 )
 
 const (
@@ -26,7 +26,7 @@ const (
 	NssfSbiDefaultScheme       = "https"
 	NssfDefaultNrfUri          = "https://127.0.0.10:8000"
 	NssfNssaiavailResUriPrefix = "/nnssf-nssaiavailability/v1"
-	NssfNsselectResUriPrefix   = "/nnssf-nsselection/v1"
+	NssfNsselectResUriPrefix   = "/nnssf-nsselection/v2"
 )
 
 type Config struct {
@@ -58,6 +58,7 @@ type Configuration struct {
 	Sbi                      *Sbi                    `yaml:"sbi"`
 	ServiceNameList          []models.ServiceName    `yaml:"serviceNameList"`
 	NrfUri                   string                  `yaml:"nrfUri"`
+	NrfCertPem               string                  `yaml:"nrfCertPem,omitempty" valid:"optional"`
 	SupportedPlmnList        []models.PlmnId         `yaml:"supportedPlmnList,omitempty"`
 	SupportedNssaiInPlmnList []SupportedNssaiInPlmn  `yaml:"supportedNssaiInPlmnList"`
 	NsiList                  []NsiConfig             `yaml:"nsiList,omitempty"`
@@ -167,7 +168,7 @@ type AmfConfig struct {
 type TaConfig struct {
 	Tai                  *models.Tai               `yaml:"tai"`
 	AccessType           *models.AccessType        `yaml:"accessType"`
-	SupportedSnssaiList  []models.Snssai           `yaml:"supportedSnssaiList"`
+	SupportedSnssaiList  []models.ExtSnssai        `yaml:"supportedSnssaiList"`
 	RestrictedSnssaiList []models.RestrictedSnssai `yaml:"restrictedSnssaiList,omitempty"`
 }
 
