@@ -12,11 +12,11 @@ import (
 	"strings"
 	"time"
 
-	nssf_context "github.com/free5gc/nssf/internal/context"
-	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/openapi/nrf/NFManagement"
+	nssf_context "github.com/nycu-ucr/nssf/internal/context"
+	"github.com/nycu-ucr/nssf/internal/logger"
+	"github.com/nycu-ucr/openapi"
+	"github.com/nycu-ucr/openapi/models"
+	"github.com/nycu-ucr/openapi/nrf/NFManagement"
 )
 
 type NrfService struct {

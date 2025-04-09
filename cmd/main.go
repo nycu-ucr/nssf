@@ -10,11 +10,11 @@ import (
 
 	"github.com/urfave/cli"
 
-	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/nssf/pkg/factory"
-	"github.com/free5gc/nssf/pkg/service"
-	logger_util "github.com/free5gc/util/logger"
-	"github.com/free5gc/util/version"
+	"github.com/nycu-ucr/nssf/internal/logger"
+	"github.com/nycu-ucr/nssf/pkg/factory"
+	"github.com/nycu-ucr/nssf/pkg/service"
+	logger_util "github.com/nycu-ucr/util/logger"
+	"github.com/nycu-ucr/util/version"
 )
 
 var NSSF *service.NssfApp

@@ -5,8 +5,8 @@ import (
 
 	"github.com/go-playground/validator/v10"
 
-	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/nssf/internal/logger"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 func BindErrorInvalidParamsMessages(err error) []models.InvalidParam {

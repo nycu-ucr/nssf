@@ -14,13 +14,13 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	nssf_context "github.com/free5gc/nssf/internal/context"
-	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/nssf/internal/sbi"
-	"github.com/free5gc/nssf/internal/sbi/consumer"
-	"github.com/free5gc/nssf/internal/sbi/processor"
-	"github.com/free5gc/nssf/pkg/app"
-	"github.com/free5gc/nssf/pkg/factory"
+	nssf_context "github.com/nycu-ucr/nssf/internal/context"
+	"github.com/nycu-ucr/nssf/internal/logger"
+	"github.com/nycu-ucr/nssf/internal/sbi"
+	"github.com/nycu-ucr/nssf/internal/sbi/consumer"
+	"github.com/nycu-ucr/nssf/internal/sbi/processor"
+	"github.com/nycu-ucr/nssf/pkg/app"
+	"github.com/nycu-ucr/nssf/pkg/factory"
 )
 
 type NssfApp struct {

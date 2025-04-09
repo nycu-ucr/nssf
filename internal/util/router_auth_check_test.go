@@ -1,15 +1,15 @@
 package util_test
 
 import (
-	"net/http"
-	"net/http/httptest"
+	"github.com/nycu-ucr/gonet/http"
+	"github.com/nycu-ucr/gonet/http/httptest"
 	"testing"
 
-	"github.com/gin-gonic/gin"
+	"github.com/nycu-ucr/gin"
 	"github.com/pkg/errors"
 
-	"github.com/free5gc/nssf/internal/util"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/nssf/internal/util"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 const (

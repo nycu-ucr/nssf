@@ -16,10 +16,10 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/nssf/pkg/factory"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/openapi/oauth"
+	"github.com/nycu-ucr/nssf/internal/logger"
+	"github.com/nycu-ucr/nssf/pkg/factory"
+	"github.com/nycu-ucr/openapi/models"
+	"github.com/nycu-ucr/openapi/oauth"
 )
 
 const NRF_PORT = 29510

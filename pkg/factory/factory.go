@@ -11,7 +11,7 @@ import (
 	"github.com/asaskevich/govalidator"
 	"gopkg.in/yaml.v2"
 
-	"github.com/free5gc/nssf/internal/logger"
+	"github.com/nycu-ucr/nssf/internal/logger"
 )
 
 var NssfConfig *Config

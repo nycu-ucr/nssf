@@ -3,20 +3,20 @@ package sbi
 import (
 	"context"
 	"fmt"
-	"net/http"
+	"github.com/nycu-ucr/gonet/http"
 	"sync"
 	"time"
 
-	"github.com/gin-gonic/gin"
+	"github.com/nycu-ucr/gin"
 
-	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/nssf/internal/sbi/processor"
-	"github.com/free5gc/nssf/internal/util"
-	"github.com/free5gc/nssf/pkg/app"
-	"github.com/free5gc/nssf/pkg/factory"
-	"github.com/free5gc/openapi/models"
-	"github.com/free5gc/util/httpwrapper"
-	logger_util "github.com/free5gc/util/logger"
+	"github.com/nycu-ucr/nssf/internal/logger"
+	"github.com/nycu-ucr/nssf/internal/sbi/processor"
+	"github.com/nycu-ucr/nssf/internal/util"
+	"github.com/nycu-ucr/nssf/pkg/app"
+	"github.com/nycu-ucr/nssf/pkg/factory"
+	"github.com/nycu-ucr/openapi/models"
+	"github.com/nycu-ucr/util/httpwrapper"
+	logger_util "github.com/nycu-ucr/util/logger"
 )
 
 type nssfApp interface {

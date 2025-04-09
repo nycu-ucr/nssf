@@ -1,8 +1,8 @@
 package app
 
 import (
-	nssf_context "github.com/free5gc/nssf/internal/context"
-	"github.com/free5gc/nssf/pkg/factory"
+	nssf_context "github.com/nycu-ucr/nssf/internal/context"
+	"github.com/nycu-ucr/nssf/pkg/factory"
 )
 
 type NssfApp interface {

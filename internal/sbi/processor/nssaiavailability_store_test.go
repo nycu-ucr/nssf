@@ -3,18 +3,18 @@ package processor_test
 import (
 	"encoding/json"
 	"fmt"
-	"net/http"
-	"net/http/httptest"
+	"github.com/nycu-ucr/gonet/http"
+	"github.com/nycu-ucr/gonet/http/httptest"
 	"testing"
 
-	"github.com/gin-gonic/gin"
+	"github.com/nycu-ucr/gin"
 	"go.uber.org/mock/gomock"
 
-	"github.com/free5gc/nssf/internal/sbi/processor"
-	"github.com/free5gc/nssf/internal/util"
-	"github.com/free5gc/nssf/pkg/app"
-	"github.com/free5gc/nssf/pkg/factory"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/nssf/internal/sbi/processor"
+	"github.com/nycu-ucr/nssf/internal/util"
+	"github.com/nycu-ucr/nssf/pkg/app"
+	"github.com/nycu-ucr/nssf/pkg/factory"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 func setup() {

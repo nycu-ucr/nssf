@@ -10,10 +10,10 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/free5gc/nssf/internal/logger"
-	"github.com/free5gc/nssf/pkg/factory"
-	"github.com/free5gc/openapi"
-	"github.com/free5gc/openapi/models"
+	"github.com/nycu-ucr/nssf/internal/logger"
+	"github.com/nycu-ucr/nssf/pkg/factory"
+	"github.com/nycu-ucr/openapi"
+	"github.com/nycu-ucr/openapi/models"
 )
 
 // Title in Problem Details for NSSF HTTP APIs

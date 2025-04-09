@@ -1,8 +1,8 @@
 package consumer
 
 import (
-	"github.com/free5gc/nssf/pkg/app"
-	"github.com/free5gc/openapi/nrf/NFManagement"
+	"github.com/nycu-ucr/nssf/pkg/app"
+	"github.com/nycu-ucr/openapi/nrf/NFManagement"
 )
 
 type Consumer struct {
